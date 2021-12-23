@@ -1,4 +1,11 @@
-const removeFromArray = function() {
+const removeFromArray = function(arr, ...indices) {
+  let newArr = [];
+  for(let i = 0; i < arr.length; i++){
+    if(!indices.includes(arr[i])){
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
 
 };
 
